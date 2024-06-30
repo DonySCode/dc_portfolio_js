@@ -17,7 +17,7 @@
   --color-dark: #525252;
   --color-white: #ffff;
   --color-light: #e7e7e7;
-  --color-LD: rgba(28, 99, 242, 0.12);
+  --color-LD: rgba(12, 187, 218, 0.185);
 
   --transition: 0.4s ease;
 }
@@ -27,6 +27,7 @@ html {
 body {
   background: var(--color-white);
   color: var(--color-dark);
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -221,4 +222,100 @@ header {
   background: var(--color-primary);
   border-radius: 50%;
   padding: 0.5rem 3rem 0.5rem 1rem;
+}
+
+#About {
+  background-color: var(--color-light);
+}
+.about-container {
+  display: grid;
+  grid-template-columns: 28rem auto;
+  gap: 5rem;
+}
+.about-info p {
+  margin-bottom: 1rem;
+}
+.read-more {
+  display: none;
+}
+.show-more {
+  display: block;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+.read-more-block {
+  display: block;
+}
+.skills-container{
+  width: 60%;
+}
+.skills-tab{
+  margin-bottom: 1rem;
+}
+.skills-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-primary);
+  color: var(--color-white) !important;
+  cursor: pointer;
+  padding: 1.6rem;
+}
+.skills-title h3{
+  color: var(--color-white);
+}
+.skills-title i{
+  font-size: 1.1rem;
+}
+.skills-title .left{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.skills-items .item{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+  background: var(--color-light);
+  padding: 1rem;
+  margin-bottom: .3rem;
+  transition: var(--transition);
+}
+.skills-items .item:hover{
+  background: var(--color-white);
+}
+.progress-area{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.progress-bar{
+  width: 100%;
+  height: .6rem;
+  background: var(--color-LD);
+}
+.progress{
+  width: 90%;
+  background-color: var(--color-primary);
+  height: 100%;
+}
+.skills-items .item:nth-child(1) .progress{
+  width: 99% !important;
+}
+.skills-items .item:nth-child(2) .progress{
+  width: 85% !important;
+}
+.skills-items .item:nth-child(3) .progress{
+  width: 95% !important;
+}
+.skills-items .item:nth-child(4) .progress{
+  width: 95% !important;
+}
+.skills-items{
+  display: none;
+}
+.skills-items-show{
+  display: block;
 }
