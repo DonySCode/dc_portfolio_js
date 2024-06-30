@@ -22,7 +22,30 @@ document.querySelector(".show-more").addEventListener("click", () => {
     document.querySelector(".show-more").textContent = "Show More";
   }
 });
-document.querySelector(".show-more").addEventListener("click", () => {
-    document.querySelector(".read-more").classList.toggle("read-more-block");
 
-  });
+// Skills
+let AllTabs = document.querySelectorAll('.skills-tab');
+
+AllTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        tab.querySelector('.skills-items').classList.toggle('skills-items-show');
+        tab.querySelector('.right').classList.toggle('icon-item');
+    })
+});
+
+//NavItems
+let navItems = document.querySelector('.nav-items');
+let OpenMenu = document.querySelector('.open');
+let CloseMenu = document.querySelector('.close')
+
+OpenMenu.addEventListener('click', () => {
+    navItems.classList.add('navShow');
+    OpenMenu.style.display='none'
+    CloseMenu.style.display='inline-block'
+})
+
+CloseMenu.addEventListener('click', () => {
+    navItems.classList.remove('navShow');
+    OpenMenu.style.display='inline-block'
+    CloseMenu.style.display='none'
+})
